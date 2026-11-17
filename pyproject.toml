@@ -7,7 +7,11 @@ authors = [
     { name = "Nile", email = "54053114+nile999@users.noreply.github.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.163.1",
+    "pydantic-settings>=2.16.3",
+    "pyyaml>=6.0.3",
+]
 
 [project.scripts]
 kitei-rag = "kitei_rag:main"
@@ -15,3 +19,20 @@ kitei-rag = "kitei_rag:main"
 [build-system]
 requires = ["uv_build>=0.13.8,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
