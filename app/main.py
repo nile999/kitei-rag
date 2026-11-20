@@ -12,5 +12,5 @@ class HealthResponse(BaseModel):
 
 @app.get("/health", tags=["system"])
 def health() -> HealthResponse:
-    """死活監視用。デプロイ先のヘルスチェックでも使う。"""
+    """死活監視用。デプロイ先のヘルスチェックでも使う。。"""
     return HealthResponse(status="ok")
