@@ -1,0 +1,22 @@
+# 全員架空の人物です
+users:
+  - id: u001
+    name: 山田 太郎
+    employment_type: full_time
+    role: member
+  - id: u002
+    name: 鈴木 花子
+    employment_type: contract
+    role: member
+  - id: u003
+    name: 佐藤 健
+    employment_type: contractor
+    role: member
+  - id: u004
+    name: 田中 一郎
+    employment_type: full_time
+    role: manager
+  - id: u005
+    name: 高橋 美咲
+    employment_type: full_time
+    role: hr
