@@ -1,7 +1,7 @@
 [project]
 name = "kitei-rag"
 version = "0.1.0"
-description = "Add your description here"
+description = "架空のSES企業の社内規約に、根拠の条文を示して答えるRAGシステム（ポートフォリオ）"
 readme = "README.md"
 authors = [
     { name = "Nile", email = "54053114+nile999@users.noreply.github.com" }
@@ -13,12 +13,10 @@ dependencies = [
     "pyyaml>=6.0.3",
 ]
 
-[project.scripts]
-kitei-rag = "kitei_rag:main"
-
-[build-system]
-requires = ["uv_build>=0.13.8,<0.14.0"]
-build-backend = "uv_build"
+[tool.uv]
+# app/ は配布用のパッケージにせず、リポジトリ直下から `uv run` で動かす。
+# そのためビルド設定（build-system）は置かない。
+package = false
 
 [dependency-groups]
 dev = [

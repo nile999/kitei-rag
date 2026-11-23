@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 
-# uv本体を公式イメージからコピーする（慣れたら :latest をバージョン番号に固定する）
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+# uv本体を公式イメージからコピーする。ローカルと同じバージョンに固定する
+COPY --from=ghcr.io/astral-sh/uv:0.13.8 /uv /uvx /bin/
 
 WORKDIR /app
 ENV UV_COMPILE_BYTECODE=1 \
